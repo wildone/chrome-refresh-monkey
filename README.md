@@ -1,5 +1,7 @@
 # Chrome Refresh Monkey
 
+![Refresh Monkey](img/refresh-monkey.png)
+
 To use:
 
 - clone the repository.
