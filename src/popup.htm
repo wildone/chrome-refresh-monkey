@@ -1,0 +1,196 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Refresh Monkey</title>
+    <!--<link rel="Stylesheet" href="css/start/jquery-ui-1.8.10.custom.css" type="text/css" />-->
+    <link rel="Stylesheet" href="css/popup.css" type="text/css" />
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <!--<script type="text/javascript" src="js/jquery-ui-1.8.10.custom.min.js"></script>-->
+    <script type="text/javascript" src="js/popup.js"></script>
+</head>
+<body>
+    <div>
+        <div id="titleBar">
+            <table cellpadding="0" cellspacing="0">
+                <tr>
+                    <td>
+                        <a href="https://github.com/wildone/chrome-refresh-monkey" target="_blank">Github</a>
+                    </td>
+                    <td>
+                        
+                    </td>
+                    <td style="text-align: right;">
+                    <a href="options.htm" target="_blank">Options</a>
+                        <!--<a href="https://github.com/wildone/chrome-refresh-monkey" target="_blank">
+                            <img alt="open in new tab" src="img/popup/arrow.png" /></a>-->
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="content">
+            <div>
+                <div>
+                    <div style="float: left;">
+                        <h2>
+                            Refresh Monkey</h2>
+                    </div>
+                    <ul id="ulCtrl">
+                        <li><a id="aStopAll" href="#" class="button orange">Stop All</a></li>
+                        <li><a id="aStop" href="#" class="button red">Stop</a></li>
+                    </ul>
+                </div>
+                <div id="reloadEvery" class="roundedcorner">
+                    <ul class="secs">
+                        <li><a href="#">5 secs</a></li>
+                        <li><a href="#">10 secs</a></li>
+                        <li><a href="#">15 secs</a></li>
+                        <li><a href="#">30 secs</a></li>
+                    </ul>
+                    <br />
+                    <ul class="secs">
+                        <li><a href="#">1 min</a></li>
+                        <li><a href="#">2 mins</a></li>
+                        <li><a href="#">5 mins</a></li>
+                        <li><a href="#">10 mins</a></li>
+                    </ul>
+                    <br />
+                    <div>
+                        <a id="aRandom" href="#">Random</a>&nbsp;&nbsp;&nbsp;between
+                        <input id="tRandomStartSecs" type="text" value="30" />
+                        secs to
+                        <input id="tRandomEndMins" type="text" value="30" />
+                        mins
+                    </div>
+                    <br />
+                    <div>
+                        <a id="aCustom" href="#">Custom</a>&nbsp;&nbsp;&nbsp;
+                        <input type="text" id="tCustomSecs" value="1.5" />
+                        seconds
+                    </div>
+                </div>
+                <div class="roundedcorner">
+                    Default time to refresh
+                    <input id="tDefaultSecs" type="text" value="5" />
+                    seconds
+                </div>
+                <div class="roundedcorner">
+                    <input type="radio" name="rTabOrUrl" id="rUrl" checked="checked" />
+                    refresh URL (stops refresh when url changes)
+                    <br />
+                    <input type="radio" name="rTabOrUrl" id="rTab" />
+                    refresh Tab (does NOT stop refresh when url changes)
+                </div>
+                <div class="roundedcorner">
+                    Reload Now : <a id="aReloadAllTabs" href="#" class="button blue">All Tabs</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a id="aReloadAllWindows" href="#" class="button blue">All Windows</a>
+                </div>
+                <div class="roundedcorner">
+                    <input type="checkbox" id="cStart" name="cStartEnd" />
+                    Enable Start Time :
+                    <input type="text" id="tStart" disabled="disabled" value="MMM dd yyyy hh:mm:ss" />
+                    <br />
+                    <input type="checkbox" id="cEnd" name="cStartEnd" />
+                    Enable End Time&nbsp; :
+                    <input type="text" id="tEnd" disabled="disabled" value="MMM dd yyyy hh:mm:ss" />
+                </div>
+                <!--<div class="roundedcorner">
+                    <input id="cBlockRefresh" type="checkbox" />
+                    Prevent refresh implemented by website
+                </div>-->
+                <div class="roundedcorner">
+                    <input id="cTabFocus" type="checkbox" />
+                    Enable refresh ONLY when the tab has focus
+                </div>
+                <!--<div class="roundedcorner">
+                    <input id="cDoubleClick" type="checkbox" />
+                    Enable double click on page to initiate refresh with default time interval
+                </div>-->
+                <br />
+                <div>
+                    <div id="dUrl">
+                        <h3>
+                            <a id="aURL_nu" href="#">Monitor Current Page</a></h3>
+                        <div id="dUrl_nu" style="margin:-10px;padding:0px;">
+                            <div class="roundedcorner">
+                                <input id="cMonitor_nu" type="checkbox" />Monitor Page changes (use XPath or JQuery
+                                <a href="http://api.jquery.com/category/selectors/" target="_blank">selector</a>
+                                to select particular element to monitor)
+                                <div id="dMonitor_nu">
+                                    <div id="dSelector_nu_ns">
+                                        <input id="cSelector_nu_ns" type="checkbox" />Selector :
+                                        <input id="tSelector_nu_ns" type="text" value="body" disabled="disabled" />
+                                    </div>
+                                </div>
+                                <div>
+                                <i>Note: For escape character use single backslash ('\') instead of double. <br />e.g., Selector: 'span#yfs_l10_\^bsesn' (without quotes) <br />URL: http://finance.yahoo.com/intlindices?e=asia </i>
+                                </div>
+                            </div>
+                            <!--<div class="roundedcorner">
+                                <input id="cOnNavi_nu" type="checkbox" />Auto reload URL on navigation<br />
+                                <input id="cOnStart_nu" type="checkbox" />Auto reload URL on browser start <br />
+                                (Note: Every time when browser starts the page will be loaded and set to auto reload with current settings)
+                            </div>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--<div>
+                <hr />
+                Pending Implementation
+                <hr />
+                Refresh Every
+                <br />
+                random time
+                <br />
+                Refresh URL (stops refresh when url changes)
+                <br />
+                Refresh Tab (does not stop when url changes)
+                <br />
+                Refresh Blocker
+                <br />
+                Start Refresh
+                <br />
+                End Refresh
+                <br />
+                Stop Refresh
+                <br />
+                Refresh when tabs are focused
+                <br />
+                Enable double click on page to refresh the page
+                <br />
+                set default time interval
+                <br />
+                Auto reload on chrome start
+                <br />
+                Auto reload when navitage to particular url
+                <br />
+                XPath support on page monitor
+                <br />
+                <hr />
+                Functionality
+                <hr />
+                Restore the scroll position
+                <br />
+                Context menu
+                <br />
+                Edit the time on the fly for next refresh
+                <br />
+                Should work with theme
+                <br />
+                show timer in toolbar icon
+                <br />
+                Refresh pinned tab
+                <br />
+                option to Move countdown to show when last 10 secs are left etc
+                <br />
+                Keyboard Shortcut
+                <br />
+                support for interval less than 1 sec
+                <br />
+                Refresh Pinned tab
+                <br />
+            </div>-->
+        </div>
+    </div>
+</body>
+</html>

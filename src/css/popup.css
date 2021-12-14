@@ -1,0 +1,190 @@
+﻿body
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    padding: 0px;
+    margin: 0px 17px 0px 0px;
+    width:380px;
+}
+div#titleBar
+{
+    background-color: #3B5998;
+    padding: 3px;
+}
+div#titleBar a
+{
+    font-family: Calibri;
+    font-size: 12px;
+    color: #FFFFFF;
+    padding: 5px;
+}
+div#titleBar a img
+{
+    background-color: #FFFFFF;
+}
+div#content
+{
+    padding: 10px;
+}
+img
+{
+    border: 0px none;
+}
+table
+{
+    width: 100%;
+}
+input[type='text']
+{
+    width: 50px;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #98C9FE;
+}
+input[type='checkbox']
+{
+    vertical-align: middle;
+    margin-top: -1px;
+}
+ul#ulCtrl
+{
+    margin: 0px;
+    padding: 3px;
+    text-align: right;
+}
+li
+{
+    display: inline;
+    list-style-type: none;
+    padding: 0px 0px 0px 0px;
+    margin: 0px;
+}
+.secs
+{
+    margin: 0px;
+    padding: 0px;
+    text-align: left;
+}
+.secs li
+{
+    width: 110px;
+}
+.secs li a
+{
+    white-space: nowrap;
+}
+
+div#reloadEvery
+{
+    text-align: left;
+    clear: both;
+}
+div#reloadEvery a
+{
+    display: inline-block;
+    padding: 5px;
+    width: 70px;
+    height: 14px;
+    font: 12px/100% Arial, Helvetica, sans-serif;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    border-radius: 12px;
+    -moz-border-radius: 12px;
+    -webkit-border-radius: 12px;
+    box-shadow: 0 5px 5px rgba(66, 140, 240, 0.5), inset 0 -10px 5px 0 #6bf, inset 0 -6px 0 0px #48c, inset 0 -20px 15px -5px #7ad;
+    -moz-box-shadow: 0 5px 5px rgba(66, 140, 240, 0.5), inset 0 -10px 5px 0 #6bf, inset 0 -6px 0 0px #48c, inset 0 -20px 15px -5px #7ad;
+    -webkit-box-shadow: 0 5px 5px rgba(66, 140, 240, 0.5), inset 0 -10px 5px 0 #6bf, inset 0 -2px 0 0px #48c, inset 0 -20px 15px -5px #7ad;
+    background-color: #C4E1FF;
+}
+div#reloadEvery a:hover
+{
+    font: 12px/100% Arial, Helvetica, sans-serif;
+    text-shadow: rgb(255, 255, 255) 0px 0px 5px;
+    font-weight: bold;
+}
+
+a.button
+{
+    display: inline-block;
+    padding: 5px;
+    width: 70px;
+    height: 14px;
+    font: 12px/100% Arial, Helvetica, sans-serif;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    border-radius: 12px;
+    -moz-border-radius: 12px;
+    -webkit-border-radius: 12px;
+    background-color: #C4E1FF;
+}
+a.button:hover
+{
+    font: 12px/100% Arial, Helvetica, sans-serif;
+    text-shadow: rgb(255, 255, 255) 0px 0px 5px;
+    font-weight: bold;
+}
+a.orange
+{
+    background-color: #FEA350;
+    box-shadow: 0 5px 5px rgba(254, 163, 80, 0.5), inset 0 -10px 5px 0 #f93, inset 0 -6px 0 0px #fc6, inset 0 -20px 15px -5px #e70;
+    -moz-box-shadow: 0 5px 5px rgba(254, 163, 80, 0.5), inset 0 -10px 5px 0 #f93, inset 0 -6px 0 0px #fc6, inset 0 -20px 15px -5px #e70;
+    -webkit-box-shadow: 0 5px 5px rgba(254, 163, 80, 0.5), inset 0 -10px 5px 0 #f93, inset 0 -6px 0 0px #fc6, inset 0 -20px 15px -5px #e70;
+}
+a.red
+{
+    background-color: #FF0000;
+    box-shadow: 0 5px 5px rgba(255, 0, 0, 0.5), inset 0 -10px 5px 0 #f66, inset 0 -6px 0 0px #f88, inset 0 -20px 15px -5px #f44;
+    -moz-box-shadow: 0 5px 5px rgba(255, 0, 0, 0.5), inset 0 -10px 5px 0 #f66, inset 0 -6px 0 0px #f88, inset 0 -20px 15px -5px #f44;
+    -webkit-box-shadow: 0 5px 5px rgba(255, 0, 0, 0.5), inset 0 -10px 5px 0 #f66, inset 0 -6px 0 0px #f88, inset 0 -20px 15px -5px #f44;
+}
+a.blue
+{
+    background-color: #C4E1FF;
+    box-shadow: 0 5px 5px rgba(66, 140, 240, 0.5), inset 0 -10px 5px 0 #6bf, inset 0 -6px 0 0px #48c, inset 0 -20px 15px -5px #7ad;
+    -moz-box-shadow: 0 5px 5px rgba(66, 140, 240, 0.5), inset 0 -10px 5px 0 #6bf, inset 0 -6px 0 0px #48c, inset 0 -20px 15px -5px #7ad;
+    -webkit-box-shadow: 0 5px 5px rgba(66, 140, 240, 0.5), inset 0 -10px 5px 0 #6bf, inset 0 -2px 0 0px #48c, inset 0 -20px 15px -5px #7ad;
+}
+
+
+.roundedcorner
+{
+    margin: 10px 0px 0px 0px;
+    padding: 10px;
+    border: 1px solid #66CCFF;
+    border-radius: 8px;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+}
+#tStart, #tEnd
+{
+    width: 200px;
+}
+div#dUrl input[type='text']
+{
+    width: 250px;
+    text-align: left;
+}
+.error_red
+{
+    background-color: Red;
+    color: White;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h3
+{
+    margin: 0px;
+    padding: 0px;
+}
+i
+{
+    font-size:10px;
+}

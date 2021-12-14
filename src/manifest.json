@@ -1,0 +1,35 @@
+{
+   "background": {
+      "page": "background.htm"
+   },
+   "browser_action": {
+      "default_icon": "img/icon19.png",
+      "default_popup": "popup.htm",
+      "default_title": "Refresh Monkey"
+   },
+   "content_scripts": [ {
+      "js": [ "js/jquery.min.js", "js/refresh-monkey.js" ],
+      "matches": [ "\u003Call_urls>" ]
+   } ],
+   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+   "description": "Automatically refresh a page at set interval. Monitor the page for a change and get notified in case of change. And more............",
+   "homepage_url": "https://github.com/wildone/chrome-refresh-monkey",
+   "icons": {
+      "128": "img/icon128.png",
+      "16": "img/icon16.png",
+      "19": "img/icon19.png",
+      "32": "img/icon32.png",
+      "48": "img/icon48.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQD3mao7vXNz+Jb2HaiEo8+xYc9FZPOaWEBQIojWbHzXAzWgQoPdj/iLZa8UGwiiyNMXx/OTqzCF/hp9SAScE638cpemqti92fL/ft4wt3SV7FMww37o6azUUowgzCdupobscUwpuJgjXep5UyPGr+Alv/g2lwaI2tN1QQJ/ozrhSQIDAQAB",
+   "manifest_version": 2,
+   "name": "Refresh Monkey",
+   "omnibox": {
+      "keyword": "t"
+   },
+   "options_page": "options.htm",
+   "permissions": [ "\u003Call_urls>", "contextMenus", "unlimitedStorage", "notifications", "tabs" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.4",
+   "web_accessible_resources": [ "js/jquery.min.js", "js/refresh-monkey.js" ]
+}
